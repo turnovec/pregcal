@@ -1,0 +1,34 @@
+{% extends "page.html" %}
+
+{% block content %}
+
+<p>Datum vyšetření: <strong>{{ data.date }}</strong> Gestační věk: <strong>{{ data.ga }}</strong></p>
+
+<table class="table table-bordered table-condensed table-hover">
+	<thead>
+		<tr>
+			<th>Pondělí</th>
+			<th>Úterý</th>
+			<th>Středa</th>
+			<th>Čtvrtek</th>
+			<th>Pátek</th>
+			<th>Sobota</th>
+			<th>Neděle</th>
+		</tr>
+	</thead>
+	<tbody>
+	{% for w in data.cal %}
+		<tr valign="top">
+		{% for d in w %}
+			<td{% if d.color %} style="background-color: {{ d.color }};"{% endif %}><small>{{ d.date }}</small><br /><strong>{{ d.ga }}</strong>{% if d.note %} <span class="note">{{d.note}}</span>{% endif %}</td>
+		{% endfor %}
+		</tr>
+	{% endfor %}
+	</tbody>
+</table>
+
+
+
+
+
+{% endblock %}
