@@ -40,11 +40,11 @@ def create_calendar(date, ga):
 			else:
 				note = None	
 
-			if gestage >= 10*7 and gestage<= 14*7-1:
-				color='#ddf'
+			if gestage >= 9*7 and gestage<= 14*7-1:
+				color='#cfc'
 
-			if gestage >= 14*7 and gestage<= 18*7:
-				color='#fdf'
+			if gestage >= 15*7 and gestage<= 18*7-1:
+				color='#ffc'
 
 
 			if gestage>=0:
