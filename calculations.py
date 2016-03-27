@@ -55,20 +55,5 @@ def create_calendar(date, ga):
 			day += 1
 		cal.append(row)
 
-	#week = 0
-	#week_data = []
-	#for day in range(0, conception.weekday())
-		#week_data.append()
-	#	dayofweek = conception.weekday()
-
-
-	# while week<=40:
-
-
-		
-	# 	week += 1
-
 	data = {'date': date, 'conception': conception, 'ga': ga, 'cal': cal}
-
-
 	return data

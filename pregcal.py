@@ -13,8 +13,6 @@ def info():
 
 		date = request.form.get('date', None)
 		ga = request.form.get('ga', None)
-		print date
-		print ga
 		if validate(date, ga):
 			return render_template('cal.html', data = create_calendar(date, ga))		
 	
