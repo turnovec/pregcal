@@ -22,7 +22,8 @@ def create_calendar(date, ga):
 	conception = date-datetime.timedelta(days=days)
 	
 	start = conception-datetime.timedelta(days=conception.weekday())
-	
+	today = datetime.date.today()
+
 	cal = []
 	day = 0
 
@@ -46,11 +47,14 @@ def create_calendar(date, ga):
 			if gestage >= 15*7 and gestage<= 18*7-1:
 				color='#ffc'
 
-
 			if gestage>=0:
 				gestage = days2ga(gestage)
 			else:
 				gestage = ''
+
+			if dd == today:
+				color='#DA70D6'
+
 			row.append({'date': datum, 'ga': gestage, 'note': note, 'color': color})
 			day += 1
 		cal.append(row)
